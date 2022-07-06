@@ -1,0 +1,26 @@
+
+#modal-presentation .modal-body{
+    padding: 15px 30px;
+    height: 100%;
+}
+
+#modal-presentation .modal-body .swiper-container-initialized{
+    height: 100%;
+}
+
+
+@media screen and (max-width: 1366px) {
+
+}
+
+@media screen and (max-width: 1159px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 450px) {
+
+}

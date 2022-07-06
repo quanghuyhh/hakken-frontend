@@ -1,0 +1,40 @@
+.v-popper--theme-tooltip .v-popper__inner {
+  font-weight: bold;
+  padding: 7px 20px 6px;
+}
+.v-popper--theme-info .v-popper__inner {
+    background: #0082bc;
+}
+
+.v-popper--theme-info .v-popper__arrow-inner {
+    border-color: #0082bc;
+}
+
+.v-popper--theme-info .v-popper__arrow-outer {
+  border-color: #0082bc;
+}
+
+.v-popper--theme-danger .v-popper__inner {
+  background: #bc0000;
+  font-weight: bold;
+}
+
+.v-popper--theme-danger .v-popper__arrow-inner {
+  border-color: #bc0000;
+}
+
+.v-popper--theme-danger .v-popper__arrow-outer {
+  border-color: #bc0000;
+}
+
+.v-popper--theme-gray .v-popper__inner {
+  background: #ddd;
+}
+
+.v-popper--theme-gray .v-popper__arrow-inner {
+  border-color: #ddd;
+}
+
+.v-popper--theme-gray .v-popper__arrow-outer {
+  border-color: #ddd;
+}

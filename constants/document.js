@@ -1,0 +1,6 @@
+export const DOCUMENT_TYPE_ITINERARY_SCHEDULE = 'schedule'
+export const DOCUMENT_TYPE_ITINERARY_ESTIMATE = 'estimate'
+export const DOCUMENT_TYPE_ITINERARY_BOOKING_ACCEPTANCE = 'booking-acceptance'
+export const DOCUMENT_TYPE_ITINERARY_INVOICE = 'invoice'
+export const DOCUMENT_TYPE_ITINERARY_RECEIPT = 'receipt'
+export const DOCUMENT_TYPE_ITINERARY_OTHER = 'other'

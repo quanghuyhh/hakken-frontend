@@ -1,0 +1,297 @@
+@charset "utf-8";
+/* CSS Document */
+
+p, ul, li {
+  padding: 0;
+  line-height: 1.8;
+  display: block;
+  margin: 0px;
+  font-weight: normal;
+  color: #333;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img {
+  border: none;
+  display: block;
+}
+
+button {
+  font-size: 16px;
+  cursor: pointer;
+  padding: 15px 20px;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  border-width: 2px;
+  background: transparent;
+  z-index: 10;
+}
+
+a:link {
+  color: #39aed2;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+#videoChat {
+  margin: 5px;
+  border: solid 1px #bbb;
+  height: calc(100vh - 12px);
+  border-radius: 5px;
+  box-shadow: 0px 3px 10px 0px rgba(9, 1, 3, 0.1);
+}
+
+#videoHead {
+  border-bottom: solid 1px #bbb;
+}
+
+#videoHead .tit {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: dotted 1px #bbb;
+}
+
+#videoHead .tit span {
+  margin-left: 10px;
+  color: #fd595e;
+}
+
+#videoHead ul {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+#videoHead ul li {
+  margin-right: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+
+#videoHead ul li:after {
+  content: "";
+  width: 1px;
+  height: 80%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  position: absolute;
+  background: #bbb;
+}
+
+#videoHead ul li:last-of-type {
+  margin-right: 0;
+}
+
+#videoHead ul li:last-of-type:after {
+  display: none;
+}
+
+#videoHead ul li > span {
+  color: #bbb;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+#videoHead ul li > p {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#videoHead ul li:nth-of-type(2) > p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+#videoHead ul li > p span {
+  color: #0082bc;
+  font-size: 22px;
+}
+
+#videoHead ul li a {
+  text-decoration: none;
+}
+
+#videoHead ul li a span {
+  margin-right: 5px;
+}
+
+#videoChat .videoContent {
+  height: calc(100% - 171px);
+}
+
+#videoIn {
+  background: #000;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#videoIn img {
+
+}
+
+#videoIn .userView {
+  height: 100%;
+  width: auto;
+}
+
+#videoIn .userView .user-share {
+  position: absolute;
+  width: 300px;
+  left: 20px;
+  bottom: 250px;
+  height: 200px;
+}
+
+#videoIn .clientView {
+  width: 300px;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: 10;
+}
+
+#videoIn .clientView .disableLocalVideo {
+  padding: 0;
+  color: #c13c3d;
+  background: #777;
+  border: 1px solid #ddd;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 87px;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 60px;
+  position: absolute;
+  top: 28%;
+  left: 33%;
+}
+
+#videoIn .video {
+  height: 100%;
+  display: flex;
+  border-radius: 20px;
+  box-shadow: 0px 1px 3px 0px #3c40434d, 0px 4px 8px 3px #3c404326;
+  overflow: hidden;
+  justify-content: center;
+  margin: auto;
+}
+
+#videoIn .video video {
+  margin: auto;
+}
+
+.action-meet {
+  padding: 10px;
+}
+
+.action-meet .call-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-meet .call-icons .call-items .call-item, .end-call {
+  display: inline-block;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.action-meet .call-icons .call-items .call-item button, .end-call button {
+  padding: 0;
+  color: #777;
+  border: 1px solid #ddd;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50px;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.red-button {
+  background-color: #ea4335 !important;
+  color: #ffffff !important;
+}
+
+.action-meet .call-icons .call-items .call-item li::after,
+.action-meet .call-icons .call-items button:hover::after {
+ content: none !important;
+}
+
+.modal-background {
+  padding: 30px;
+}
+
+.modal-background .background-title{
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.background-processor {
+  display: flex;
+}
+.background-processor li {
+  margin-right: 5px;
+}
+
+.background-processor .option-processor {
+  border: solid 1px #bbb;
+  color: #bbb;
+  padding: 2px;
+  width: auto;
+}
+
+.background-processor .option-processor img {
+  width: 65px;
+  height: 65px;
+}
+
+.background-processor .option-processor span {
+  font-size: 60px;
+}
+
+@media screen and (max-width: 730px) {
+  #videoHead {
+    height: auto;
+  }
+
+  #videoHead ul {
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  #videoHead ul li {
+    width: 100%;
+    margin-right: 0;
+    padding: 10px 20px;
+    border-bottom: solid 1px #ccc;
+  }
+
+  #videoHead ul li:nth-of-type(3) {
+    border-right: solid 1px #ccc;
+  }
+
+  #videoHead ul li:nth-of-type(3), #videoHead ul li:nth-of-type(4) {
+    width: 50%;
+    text-align: center;
+  }
+
+  #videoHead ul li:after {
+    display: none;
+  }
+
+  #videoIn .clientView {
+    padding: 20px;
+    width: 50%;
+    position: static;
+  }
+}

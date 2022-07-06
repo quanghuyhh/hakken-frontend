@@ -1,0 +1,33 @@
+.wapper {
+  width: 100%;
+  height: calc(100% - 70px);
+  overflow: auto;
+  margin: 0 0 20px 0;
+}
+
+.wapper .cost {
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1366px) {
+}
+
+@media screen and (max-width: 1159px) {
+    .swiper-slide .column .subOption {
+        border: none;
+        margin-top: 0px;
+        padding-top: 0px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 450px) {
+}
+@media screen and (max-width: 360px) {
+  .wapper {
+    height: 68vh;
+  }
+}

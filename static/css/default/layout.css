@@ -1,0 +1,646 @@
+@charset "utf-8";
+/*
+	Description: initial setting
+	Version: 1.0
+	Author: idealgrow
+*/
+/*
+===== CONTENTS ===========================================
+
+	1: BASE LAYOUT
+
+==========================================================
+*/
+header {
+  padding: 20px 0;
+}
+
+header #logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header #logo img {
+  margin: 0 auto 10px auto;
+  height: 60px;
+  width: auto;
+}
+
+header #logo p {
+  background: #f8b62d;
+  border-radius: 50px;
+  display: inline-block;
+  padding: 0 30px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+header .headNav p {
+  border-top: solid 1px #dcdcdc;
+  text-align: center;
+  padding: 10px 0;
+}
+
+header .headNav p span, header .headNav p a {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+header .headNav nav ul {
+  border-top: solid 1px #dcdcdc;
+  border-bottom: solid 1px #dcdcdc;
+  display: flex;
+}
+
+header .headNav nav ul li {
+  width: 33%;
+  text-align: center;
+  border-right: solid 1px #dcdcdc;
+}
+
+header .headNav nav ul li:last-of-type {
+  border-right: none;
+}
+
+header .headNav nav ul li:nth-of-type(2) {
+  width: 34%;
+}
+
+header .headNav nav ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 40px 0 0 0;
+}
+
+header .headNav nav ul li:first-of-type a {
+  background: url("../../images/icons/ico_home.svg") top 13px center no-repeat;
+  background-size: 24px auto;
+}
+
+header .headNav nav ul li:nth-of-type(2) a {
+  background: url("../../images/icons/ico_profile.svg") top 14px center no-repeat;
+  background-size: 27px auto;
+}
+
+header .headNav nav ul li:nth-of-type(3) a {
+  background: url("../../images/icons/ico_lock.svg") top 13px center no-repeat;
+  background-size: 24px auto;
+}
+
+.inner {
+  padding: 0 20px 20px 20px;
+}
+
+footer {
+  background: #000;
+}
+
+footer ul {
+  padding: 20px 20px 0 20px;
+}
+
+footer ul li {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+}
+
+footer ul li a {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+footer ul li a:before {
+  content: "";
+  background: #fff;
+  height: 2px;
+  width: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+footer #copy {
+  text-align: center;
+  padding: 10px 0;
+  border-top: solid 1px #555;
+  margin-top: 20px;
+  color: #999;
+}
+
+.modal {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+
+.mdTit {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.modal__bg {
+  background: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+
+.modal__content {
+  border-radius: 10px;
+  background: #fff;
+  left: 50%;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  max-width: 600px;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.modalControl li input {
+  border: none;
+  border-radius: 100px;
+  background: #ddd;
+}
+
+.modalControl li.deleteBtn input {
+  background: #bc0000;
+  color: #fff;
+}
+
+.modalControl li.requestBtn input {
+  background: #f8b62d;
+}
+
+.modalControl li:nth-of-type(2) {
+  margin-top: 20px;
+}
+
+.modalControl li:nth-of-type(2) input {
+  padding: 10px;
+}
+
+.modal .documentList {
+  margin-bottom: 20px;
+}
+
+.modal .documentList li {
+  margin-bottom: 10px;
+}
+
+.modal .documentList a {
+  text-decoration: none;
+  display: block;
+  background: url("../../images/icons/ico_document.svg") left 15px center no-repeat;
+  background-size: 20px auto;
+  padding: 10px 10px 10px 45px;
+  border: solid 1px #000;
+  border-radius: 5px;
+}
+
+.modal .selectDay {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.modal .selectDay li:first-of-type {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-right: 0;
+}
+
+.modal .selectDay li {
+  width: 30%;
+  margin-right: 5%;
+  position: relative;
+}
+
+.modal .selectDay li:nth-of-type(2):after {
+  content: ":";
+  position: absolute;
+  right: -12%;
+  top: 45%;
+  transform: translateY(-50%);
+  font-size: 24px;
+}
+
+.modal .selectDay .closeBtn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  background: #ddd;
+  right: -10px;
+  bottom: 15px;
+  cursor: pointer;
+}
+
+.modal .changeDay {
+  border: solid 2px #ebebeb;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+}
+
+.modal .changeDay span {
+  background: #000;
+  color: #fff;
+  display: block;
+  border-radius: 3px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.modal #onlineWait{
+  margin-bottom: 20px;
+}
+.modal #onlineWait p.startTime{
+  font-weight: bold;
+  text-align: center;
+  font-size: 22px;
+  color: #0082bc;
+}
+.modal #onlineWait p.startTime span{
+  font-size: 16px;
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  font-weight: normal;
+  padding:5px 10px;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+.modal #onlineWait p.startTime span:last-of-type{
+  background:#BC0000;
+}
+.modal #onlineWait a{
+  display: block;
+  margin: 20px 0;
+  border: dashed 2px #0082bc;
+  padding: 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 16px;
+  background: #EDF8FD;
+}
+.modal #onlineWait a p{
+  color: #0082bc;
+}
+.modal #onlineWait a img{
+  height: 60px;
+  width: auto;
+  margin: 0 auto 20px auto;
+}
+.modal #onlineWait a span{
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#mdReserveEdit p, #mdReserve p {
+  margin-bottom: 20px;
+}
+
+.modal .termCheck {
+  margin-bottom: 20px;
+}
+
+.modal .termCheck li {
+  margin-bottom: 10px;
+}
+
+.modal .termCheck li label {
+  padding: 10px 10px 10px 35px;
+  display: block;
+  position: relative;
+  border: solid 2px #eee;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal .termCheck li label:before {
+  content: "";
+  background: url("../../images/icons/ico_check_out.svg") center center no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 10px;
+  top: 13px;
+}
+
+.modal .termCheck li input[type="checkbox"]:checked + label:before {
+  content: "";
+  background: url("../../images/icons/ico_check.svg") center center no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 10px;
+  top: 13px;
+}
+
+.modal .termCheck li input[type="checkbox"]:checked + label {
+  color: #0082bc;
+  border: solid 2px #0082bc;
+}
+
+@media screen and (min-width: 1099px) {
+  header {
+    height: 125px;
+    padding: 30px 0 0 0;
+    width: 1100px;
+    margin: 0 auto 30px auto;
+    position: relative;
+  }
+
+  header #logo {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  header #logo img {
+    margin: 0;
+    height: 80px;
+    width: auto;
+  }
+
+  header #logo p {
+    position: absolute;
+    left: 200px;
+    top: 35px;
+  }
+
+  header .headNav {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 400px;
+  }
+
+  header .headNav p {
+    border-top: none;
+    text-align: right;
+    padding: 0;
+  }
+
+  header .headNav p span, header .headNav p a {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 5px;
+    text-decoration: none;
+  }
+
+  header .headNav nav ul {
+    border: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  header .headNav nav ul li {
+    width: auto !important;
+    text-align: right;
+    border-right: none;
+    margin-left: 20px;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  header .headNav nav ul li:before {
+    content: "";
+    width: 1px;
+    background: #000;
+    height: 14px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  header .headNav nav ul li:first-of-type:before {
+    display: none;
+  }
+
+  header .headNav nav ul li:last-of-type {
+    border-right: none;
+  }
+
+  header .headNav nav ul li a {
+    padding: 0;
+  }
+
+  header .headNav nav ul li a:hover {
+    color: #f8b62d;
+  }
+
+  header .headNav nav ul li:first-of-type a, header .headNav nav ul li:nth-of-type(2) a, header .headNav nav ul li:nth-of-type(3) a {
+    background: none;
+  }
+
+  main {
+    min-height: calc(100vh - 230px);
+  }
+
+  .inner {
+    width: 1100px;
+    margin: 0 auto;
+    padding: 0 0 80px 0;
+  }
+
+  footer {
+    width: 1100px;
+    background: none;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    border-top: solid 1px #dcdcdc;
+  }
+
+  footer ul {
+    padding: 20px 40px 20px 0;
+    display: flex;
+    width: 72%;
+    height: 70px;
+  }
+
+  footer ul li {
+    margin: 0 15px 0 0;
+    font-size: 15px;
+  }
+
+  footer ul li a {
+    color: #000 !important;
+  }
+
+  footer ul li a:before {
+    display: none;
+  }
+
+  footer ul li a:hover {
+    text-decoration: underline;
+  }
+
+  footer #copy {
+    width: 27%;
+    text-align: right;
+    padding: 20px 0 20px 40px;
+    border-top: none;
+    margin-top: 0;
+    color: #000;
+    height: 70px;
+  }
+
+  .mdTit {
+    font-size: 22px;
+    text-align: center;
+    margin-left: -30px;
+  }
+
+  .modal__content {
+    padding: 30px;
+  }
+
+  .modalControl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .modalControl li {
+    width: 200px;
+    margin: 0 10px;
+  }
+
+  .modalControl li:first-of-type {
+    order: 2;
+  }
+
+  .modalControl li:nth-of-type(2) {
+    margin-top: 0;
+  }
+
+  .modalControl li:nth-of-type(2) input {
+    padding: 15px;
+  }
+
+  .modal .documentList {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .modal .documentList li {
+    width: 49%;
+    margin-right: 2%;
+  }
+
+  .modal .documentList li:nth-of-type(even) {
+    margin-right: 0;
+  }
+
+  .modal .documentList a:hover {
+    background: url("../../images/icons/ico_document.svg") left 15px center no-repeat, #f0f0f0;
+    background-size: 20px auto;
+    color: #000;
+  }
+
+  .modal .selectDay {
+    margin-bottom: 30px;
+  }
+
+  .modal .selectDay li:first-of-type {
+    width: 55%;
+    margin-bottom: 0;
+    margin-right: 2%;
+  }
+
+  .modal .selectDay li {
+    width: 15%;
+    margin-right: 2%;
+  }
+
+  .modal .selectDay li:last-of-type {
+    margin-right: 0;
+  }
+
+  .modal .selectDay li:nth-of-type(2):after {
+    right: -10%;
+  }
+
+  .modal .changeDay {
+    text-align: left;
+    position: relative;
+  }
+
+  .modal .changeDay span {
+    text-align: center;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0;
+    font-size: 16px;
+    padding: 3px 10px;
+    border-radius: 5px;
+  }
+
+  #mdReserveEdit p, #mdReserve p {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .modal .termCheck {
+    margin: 0 auto 30px auto;
+  }
+
+  .modal .termCheck li {
+    margin-bottom: 10px;
+  }
+  .modal #onlineWait p.startTime{
+    font-weight: bold;
+    text-align: center;
+    font-size: 26px;
+    color: #0082bc;
+  }
+  .modal #onlineWait p.startTime span{
+    font-size: 14px;
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    font-weight: normal;
+    padding:5px 10px;
+    border-radius: 5px;
+    margin: 0 0 0 10px;
+    vertical-align: middle;
+  }
+  .modal #onlineWait a{
+    display: flex;
+    align-items: center;
+  }
+  .modal #onlineWait a p{
+    color: #0082bc;
+  }
+  .modal #onlineWait a img{
+    margin: 0 30px 0 10px;
+  }
+  .modal #onlineWait a span{
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+}
